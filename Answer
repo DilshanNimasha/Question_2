@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+
+int main()
+{
+    
+    int t;
+    int i, gcd;
+    int  total =0;
+
+    printf("Number of cities: ");
+    scanf("%d", &t);
+
+    int  l[t];
+    
+  for(int g=0; g<t; g++)
+  {		
+	  //Getting inputs in to array
+        printf("Number of blocks: ");
+        scanf("%d", &l[g]);
+  }  
+        
+    //considering 2 numbers
+   for(int g=0; g<t; g++)
+  {
+            for(int k=0; k<t; ++k)
+      {
+            for(i=1; i <= l[g] && i <= l[k]; ++i)
+            {
+             
+                     // Checks if i is factor of both integers
+                        if(l[g]%i==0 && l[k]%i==0)
+                     {
+                            gcd = i;
+                            
+                            if(gcd==1)
+                            {
+                                gcd=0;
+                            }
+                     }
+                    
+                
+            }
+
+			// Filter want numbers GCD
+            
+            if(l[g]!=l[k] && l[g]<l[k])
+            
+                 {
+                    
+                      //printf("G.C.D of %d and %d is %d\n\n", l[g], l[k], gcd);
+                      
+                         total = total + gcd;
+                        
+                 }
+                 
+      }
+  }
+    
+        printf("Total %d", total);
+    
+    return 0;
+}
