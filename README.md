@@ -14,6 +14,7 @@ Print a maximum number of blocks used to build roads in such a way the provided 
 Sample Input 
 
 3
+
 4 6 9
 
 Sample Output
